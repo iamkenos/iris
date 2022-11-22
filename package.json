@@ -7,5 +7,24 @@
     "type": "git",
     "url": "git+ssh://git@github.com:iamkenos/iris.git"
   },
-  "license": "ISC"
+  "scripts": {
+    "prepare": "husky install",
+    "release:first": "standard-version --first-release",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "lint": "eslint ./"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "husky": "^7.0.4",
+    "resolve-tspaths": "^0.3.0",
+    "standard-version": "^9.3.2"
+  }
 }

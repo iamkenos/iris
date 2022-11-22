@@ -1,0 +1,10 @@
+*.*
+!build/**/*
+!demo/test/.files/**/*
+!demo/test/.snapshots/**/baseline/**/*
+!demo/test/fixtures/**/*
+!demo/test/features/**/*
+!demo/test/wdio.conf.ts
+!src/**/*
+!tsconfig**
+!package-lock.json

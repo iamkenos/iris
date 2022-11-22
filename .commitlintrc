@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "@commitlint/config-conventional"
+  ],
+  "rules": {
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "build",
+        "ci",
+        "common",
+        "deps",
+        "demo",
+        "config",
+        "generics",
+        "linting"
+      ]
+    ]
+  }
+}
