@@ -1,0 +1,11 @@
+{
+  "name": "@iamkenos/iris",
+  "version": "0.0.0",
+  "description": "An API testing tool using Axios and Jest",
+  "author": "iamkenos",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:iamkenos/iris.git"
+  },
+  "license": "ISC"
+}
