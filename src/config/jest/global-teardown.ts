@@ -1,6 +1,6 @@
 import type { Config } from "@jest/types";
 
-import { AllureAdapter } from "@iamkenos/iris/common/utils";
+import { ALLURE_HTML_DIR, ALLURE_RAW_DIR, ALLURE_REPORTS_DIR, AllureAdapter } from "@common";
 import { DIM_COLOR } from "jest-matcher-utils";
 import path from "path";
 
@@ -10,11 +10,11 @@ import path from "path";
  * @see [Configuring Jest](https://jestjs.io/docs/configuration#globalsetup-string)
  */
 export default async(config: Config.GlobalConfig) => {
-  const raw = path.join(config.rootDir, ".reports", "allure");
-  const html = path.join(raw, "html");
+  const raw = path.join(config.rootDir, ALLURE_REPORTS_DIR, ALLURE_RAW_DIR);
+  const html = path.join(raw, ALLURE_HTML_DIR);
   await AllureAdapter.cli(["-q", "generate", raw, "-c", "-o", html]);
 
   console.log("");
-  console.log("To serve generated reports, execute: ");
+  console.log("To serve generated reports, execute:");
   console.log(DIM_COLOR(`$ npx allure open '${html}'`));
 };

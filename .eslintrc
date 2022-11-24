@@ -33,5 +33,15 @@
     "space-before-function-paren": ["error", "never"],
     "space-before-blocks": ["error"],
     "sort-imports": ["error", { "ignoreCase": true, "ignoreDeclarationSort": true }]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["./**/*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off",
+        "no-undef": "off",
+        "quotes": ["error", "single"]
+      }
+    }
+  ]
 }

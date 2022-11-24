@@ -6,7 +6,7 @@
   "configurations": [
     {
       "autoAttachChildProcesses": true,
-      "name": "hornet: debug @ spec",
+      "name": "iris: debug @ spec",
       "type": "node",
       "request": "launch",
       "console": "integratedTerminal",

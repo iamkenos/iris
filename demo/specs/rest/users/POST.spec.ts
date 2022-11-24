@@ -1,4 +1,9 @@
 import {
+  thenResponseStatusEquals,
+  whenSendRequest
+} from "@iamkenos/iris/steps";
+import {
+  givenPostUserRequest,
   PostUserRequestBody,
   REQ_ENDPOINT,
   REQ_METHOD
@@ -6,6 +11,10 @@ import {
 
 describe(`[REST] Users: ${REQ_METHOD} ${REQ_ENDPOINT}`, () => {
   it("S01: should create user data", async() => {
-    console.log("from test", (global as any).baseDir);
+    const payload: PostUserRequestBody = { name: "no face", job: "ghost" };
+    const request = givenPostUserRequest(payload);
+    const response = await whenSendRequest(request);
+
+    thenResponseStatusEquals(response, 201);
   });
 });

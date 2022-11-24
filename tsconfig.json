@@ -12,6 +12,10 @@
       "@iamkenos/iris/*": ["src/*"],
       "@common": ["src/common/index"],
       "@common/*": ["src/common/*"],
+      "@client": ["src/client/index"],
+      "@client/*": ["src/client/*"],
+      "@steps": ["src/steps/index"],
+      "@steps/*": ["src/steps/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "removeComments": false,

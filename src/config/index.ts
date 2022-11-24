@@ -8,7 +8,9 @@ export const configure = (overrides: Config) : Config => {
   // custom config defaults
   const custom = {
     globals: {
-      baseDir: path.dirname(callsites()[1].getFileName()),
+      iris: {
+        baseDir: path.dirname(callsites()[1].getFileName())
+      }
     }
   };
   // resolve all known custom config directories, relative to the implementing config's file path

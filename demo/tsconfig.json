@@ -2,6 +2,16 @@
   "extends": "../tsconfig.json",
   "include": ["./**/*.ts"],
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "@iamkenos/iris": ["../build/index"],
+      "@iamkenos/iris/*": ["../build/*"],
+      "@common": ["../build/common/index"],
+      "@common/*": ["../build/common/*"],
+      "@client": ["../build/client/index"],
+      "@client/*": ["../build/client/*"],
+      "@steps": ["../build/steps/index"],
+      "@steps/*": ["../build/steps/*"]
+    }
   }
 }
