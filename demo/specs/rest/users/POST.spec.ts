@@ -1,7 +1,8 @@
 import {
+  thenResponseSchemaEquals,
   thenResponseStatusEquals,
   whenSendRequest
-} from "@iamkenos/iris/steps";
+} from "@iamkenos/iris";
 import {
   givenPostUserRequest,
   PostUserRequestBody,
@@ -16,5 +17,6 @@ describe(`[REST] Users: ${REQ_METHOD} ${REQ_ENDPOINT}`, () => {
     const response = await whenSendRequest(request);
 
     thenResponseStatusEquals(response, 201);
+    thenResponseSchemaEquals(response, "rest/users/post-user");
   });
 });

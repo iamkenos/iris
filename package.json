@@ -17,7 +17,7 @@
     "prebuild": "rimraf build && rimraf *.tgz",
     "build": "tsc --build tsconfig.build.json",
     "postbuild": "resolve-tspaths",
-    "test:demo": "jest --config demo/jest.config.js"
+    "test:demo": "jest --config demo/jest.config.ts"
   },
   "license": "ISC",
   "main": "./build/index.js",
@@ -32,6 +32,9 @@
       ],
       "config": [
         "./build/config/index.d.ts"
+      ],
+      "matchers": [
+        "./build/matchers/index.d.ts"
       ],
       "steps": [
         "./build/steps/index.d.ts"
@@ -55,6 +58,10 @@
       "import": "./src/config/index.ts",
       "require": "./build/config/index.js"
     },
+    "./matchers": {
+      "import": "./src/matchers/index.ts",
+      "require": "./build/matchers/index.js"
+    },
     "./steps": {
       "import": "./src/steps/index.ts",
       "require": "./build/steps/index.js"
@@ -62,6 +69,9 @@
   },
   "dependencies": {
     "@types/jest": "^27.0.0",
+    "ajv": "^8.11.2",
+    "ajv-errors": "^3.0.0",
+    "ajv-formats": "^2.1.1",
     "allure-commandline": "^2.20.1",
     "axios": "^0.26.0",
     "callsites": "^3.1.0",
@@ -69,6 +79,7 @@
     "jest": "^27.0.0",
     "jest-allure": "0.1.3",
     "ts-jest": "^27.0.4",
+    "ts-node": "^10.9.1",
     "typescript": "^4.3.5"
   },
   "devDependencies": {

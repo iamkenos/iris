@@ -3,7 +3,7 @@ import {
   thenResponseBodyPropEquals,
   thenResponseStatusEquals,
   whenSendRequest
-} from "@iamkenos/iris/steps";
+} from "@iamkenos/iris";
 import {
   givenGetUserByIdRequest,
   REQ_ENDPOINT,

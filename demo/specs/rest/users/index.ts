@@ -1,6 +1,8 @@
-import { Request } from "@iamkenos/iris/client";
-import { MimeType } from "@iamkenos/iris/common";
-import { givenRequest } from "@iamkenos/iris/steps";
+import {
+  givenRequest,
+  MimeType,
+  Request
+} from "@iamkenos/iris";
 import { BASE_PATH, HOST } from "../";
 
 export const REQ_ENDPOINT = "/users";

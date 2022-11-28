@@ -9,3 +9,5 @@ node_modules
 build
 .coverage
 **/.reports
+**/.snapshots/**/actual
+**/.snapshots/**/diff

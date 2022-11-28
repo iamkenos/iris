@@ -1,5 +1,7 @@
-import { Request } from "@iamkenos/iris/client";
-import { givenRequest } from "@iamkenos/iris/steps";
+import {
+  givenRequest,
+  Request
+} from "@iamkenos/iris";
 
 export const HOST = "https://reqres.in";
 export const BASE_PATH = "/api";

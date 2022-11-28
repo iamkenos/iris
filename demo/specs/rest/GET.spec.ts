@@ -4,7 +4,7 @@ import {
   thenResponseStatusEquals,
   thenResponseTimeIsLessThan,
   whenSendRequest
-} from "@iamkenos/iris/steps";
+} from "@iamkenos/iris";
 import {
   givenGetRequest,
   REQ_ENDPOINT,

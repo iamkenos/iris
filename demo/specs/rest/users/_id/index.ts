@@ -1,5 +1,7 @@
-import { Request } from "@iamkenos/iris/client";
-import { givenRequest } from "@iamkenos/iris/steps";
+import {
+  givenRequest,
+  Request
+} from "@iamkenos/iris";
 import { BASE_PATH, HOST } from "../../";
 
 export const REQ_PATH_PARAM_ID = "{id}";

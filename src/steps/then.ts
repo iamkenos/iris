@@ -71,3 +71,10 @@ export const thenResponseTimeIsGreaterThan = (response: Response, expected: numb
   then.toBeGreaterThan(expected);
   AllureAdapter.reporter().endStep();
 };
+
+export const thenResponseSchemaEquals = (response: Response, expected: string, preferred = true) => {
+  const then = preferred ? expect(response.body) : expect(response.body).not;
+  AllureAdapter.reporter().startStep(`${formatStepName(thenResponseSchemaEquals.name, preferred)}: ${expected}`);
+  then.toMatchJsonSchema(expected);
+  AllureAdapter.reporter().endStep();
+};

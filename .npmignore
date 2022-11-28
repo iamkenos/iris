@@ -2,4 +2,5 @@
 !tsconfig**
 !build/**/*
 !jest-preset.js
+!src/**/*
 demo
