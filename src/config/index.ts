@@ -4,7 +4,7 @@ import path from "path";
 
 import { Config } from "./types";
 
-export const configure = (overrides: Config) : Config => {
+export const configure = (overrides?: Config) : Config => {
   // custom config defaults
   const custom = {
     globals: {
