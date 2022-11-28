@@ -1,6 +1,6 @@
 import { capitalCase } from "change-case";
 import { Response } from "@client";
-import { AllureAdapter, MimeType } from "@common";
+import { AllureAdapter, isJSON, MimeType } from "@common";
 
 export const formatStepName = (functionName: string, preferred = true) => {
   return preferred ? capitalCase(functionName) : `${capitalCase(functionName)} (Not)`;
@@ -38,6 +38,15 @@ export const thenResponseBodyEquals = (response: Response, expected: any, prefer
   const then = preferred ? expect(response.body) : expect(response.body).not;
   AllureAdapter.reporter().startStep(formatStepName(thenResponseBodyEquals.name, preferred));
   AllureAdapter.reporter().addAttachment("Expected", JSON.stringify(expected, null, 2), MimeType.APP_JSON);
+  then.toEqual(expected);
+  AllureAdapter.reporter().endStep();
+};
+
+export const thenResponseBodyPropEquals = (response: Response, prop: string, expected: any, preferred = true) => {
+  const nested = prop.split(".").reduce((prev, cur) => prev[cur], response.body);
+  const then = preferred ? expect(nested) : expect(nested).not;
+  AllureAdapter.reporter().startStep(`${formatStepName(thenResponseBodyPropEquals.name, preferred)}: ${prop}`);
+  AllureAdapter.reporter().addAttachment("Expected", isJSON ? JSON.stringify(expected, null, 2) : expected, MimeType.APP_JSON);
   then.toEqual(expected);
   AllureAdapter.reporter().endStep();
 };

@@ -20,6 +20,46 @@
     "test:demo": "jest --config demo/jest.config.js"
   },
   "license": "ISC",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "client": [
+        "./build/client/index.d.ts"
+      ],
+      "common": [
+        "./build/common/index.d.ts"
+      ],
+      "config": [
+        "./build/config/index.d.ts"
+      ],
+      "steps": [
+        "./build/steps/index.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./build/index.js"
+    },
+    "./client": {
+      "import": "./src/client/index.ts",
+      "require": "./build/client/index.js"
+    },
+    "./common": {
+      "import": "./src/common/index.ts",
+      "require": "./build/common/index.js"
+    },
+    "./config": {
+      "import": "./src/config/index.ts",
+      "require": "./build/config/index.js"
+    },
+    "./steps": {
+      "import": "./src/steps/index.ts",
+      "require": "./build/steps/index.js"
+    }
+  },
   "dependencies": {
     "@types/jest": "^27.0.0",
     "allure-commandline": "^2.20.1",
