@@ -11,7 +11,8 @@
       "@client": ["../build/client/index"],
       "@client/*": ["../build/client/*"],
       "@steps": ["../build/steps/index"],
-      "@steps/*": ["../build/steps/*"]
+      "@steps/*": ["../build/steps/*"],
+      "@specs": ["specs/index"]
     }
   }
 }
