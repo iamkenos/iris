@@ -18,6 +18,13 @@ export function givenGetUsersRequest() {
   });
 }
 
+export function givenGetUsersRequestByQueryParam(params: { [key: string]: string }) {
+  return givenRequest(`${BASE_URL}${REQ_PATH}`, {
+    method: REQ_METHOD_GET,
+    params
+  });
+}
+
 export function givenPostUserRequest(body: PostUserRequestBody, headers?: Request["spec"]["headers"]) {
   return givenRequest(`${BASE_URL}${REQ_PATH}`, {
     method: REQ_METHOD_POST,

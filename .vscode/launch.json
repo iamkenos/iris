@@ -11,9 +11,8 @@
       "request": "launch",
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
-      "program": "node_modules/.bin/jest",
-      "args": ["--config", ".jestrc.js", "${file}", "-t", "debug"],
-      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v16.13.0/bin/node"
+      "program": "./node_modules/jest/bin/jest.js",
+      "args": ["--config", "./jest.config.ts", "${fileBasename}"]
     },
     {
       "autoAttachChildProcesses": true,
@@ -22,9 +21,8 @@
       "request": "launch",
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}",
-      "program": "node_modules/.bin/wdio",
-      "args": ["./demo/test/wdio.conf.ts", "--debug", "--spec", "${file}", "--logLevel", "debug", "--tags", "@debug"],
-      "runtimeExecutable": "${env:HOME}/.nvm/versions/node/v16.13.0/bin/node"
+      "program": "./node_modules/jest/bin/jest.js",
+      "args": ["--config", "./demo/jest.config.ts", "${fileBasename}"]
     }
   ]
 }

@@ -68,6 +68,7 @@
     }
   },
   "dependencies": {
+    "@apidevtools/json-schema-ref-parser": "^9.1.0",
     "@types/jest": "^27.0.0",
     "ajv": "^8.11.2",
     "ajv-errors": "^3.0.0",

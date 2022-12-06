@@ -1,3 +1,4 @@
+import $RefParser from "@apidevtools/json-schema-ref-parser";
 import Ajv from "ajv";
 import ajvErrors from "ajv-errors";
 import ajvFormats from "ajv-formats";
@@ -15,7 +16,7 @@ import {
 
 expect.extend({
   // @ts-ignore
-  toMatchJsonSchema(this: MatcherState, received: any, filename: string) {
+  async toMatchJsonSchema(this: MatcherState, received: any, filename: string) {
     const ajv = new Ajv({ allErrors: true });
     ajvErrors(ajv);
     ajvFormats(ajv);
@@ -36,7 +37,19 @@ expect.extend({
     const expContent = fs.readFileSync(expFile, BufferEncoding.UTF8);
     const actual = JSON.parse(actContent);
     const expected = JSON.parse(expContent);
-    const validator = ajv.compile(expected);
+    const canRead = /^schema:\/\//i;
+    const customResolver = {
+      canRead,
+      /** see: [custom resolvers](https://apitools.dev/json-schema-ref-parser/docs/plugins/resolvers.html) */
+      read(file) {
+        const uri = path.join(snapshot.baselineDir, file.url.replace(canRead, ""));
+        const content = fs.readFileSync(uri);
+        return content;
+      }
+    };
+    // we need the dereferencer because ajv doesn't support local $refs out of the box
+    const schema = await $RefParser.dereference(expected, { resolve: { schema: customResolver }});
+    const validator = ajv.compile(schema);
 
     const pass = validator(actual);
     const errors = validator.errors?.map((e) => {

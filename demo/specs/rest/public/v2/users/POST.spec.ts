@@ -1,14 +1,14 @@
 import {
-  whenSendRequest,
-  thenResponseStatusEquals,
   thenResponseBodyEquals,
-  thenResponseSchemaEquals
+  thenResponseSchemaEquals,
+  thenResponseStatusEquals,
+  whenSendRequest
 } from "@iamkenos/iris";
 import { TOKEN } from "@specs";
-import { REQ_METHOD_POST, REQ_PATH, givenPostUserRequest } from "./";
+import { givenPostUserRequest, REQ_METHOD_POST, REQ_PATH } from "./";
 
 describe(`[REST]: ${REQ_METHOD_POST} ${REQ_PATH}`, () => {
-  it("S01: should require authentication", async () => {
+  it("S01: should require authentication", async() => {
     const request = givenPostUserRequest({
       name: "foo bar",
       email: "foo.bar@email.com",
@@ -21,7 +21,7 @@ describe(`[REST]: ${REQ_METHOD_POST} ${REQ_PATH}`, () => {
     thenResponseBodyEquals(response, { message: "Authentication failed" });
   });
 
-  it("S02: should create a new user", async () => {
+  it("S02: should create a new user", async() => {
     const request = givenPostUserRequest(
       {
         name: "foo bar",
@@ -34,6 +34,6 @@ describe(`[REST]: ${REQ_METHOD_POST} ${REQ_PATH}`, () => {
     const response = await whenSendRequest(request);
 
     thenResponseStatusEquals(response, 201);
-    thenResponseSchemaEquals(response, "rest/user-schema");
+    await thenResponseSchemaEquals(response, "rest/user-schema");
   });
 });
