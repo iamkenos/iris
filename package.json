@@ -17,7 +17,8 @@
     "prebuild": "rimraf build && rimraf *.tgz",
     "build": "tsc --build tsconfig.build.json",
     "postbuild": "resolve-tspaths",
-    "test:demo": "jest --config demo/jest.config.ts"
+    "test:demo": "jest --config demo/jest.config.ts",
+    "report:demo": "allure open demo/.reports/allure/html"
   },
   "license": "ISC",
   "main": "./build/index.js",

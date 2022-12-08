@@ -7,7 +7,7 @@ import axios from "axios";
 import { givenGetUsersRequest, givenGetUsersRequestByQueryParam, REQ_METHOD_GET, REQ_PATH } from "./";
 
 describe(`[REST]: ${REQ_METHOD_GET} ${REQ_PATH}`, () => {
-  it("S01A: should return details of a specific type of user: Vanilla Axios", async() => {
+  it("S01A: should return details of a specific type of user: Default", async() => {
     const response = await axios("https://gorest.co.in/public/v2/users", {
       method: "GET",
       params: {
@@ -24,7 +24,7 @@ describe(`[REST]: ${REQ_METHOD_GET} ${REQ_PATH}`, () => {
     });
   });
 
-  it("S01B: should return details of a specific type of user: Framework API", async() => {
+  it("S01B: should return details of a specific type of user: Abstracted", async() => {
     const request = givenGetUsersRequestByQueryParam({ gender: "female", status: "active" });
     const response = await whenSendRequest(request);
 
