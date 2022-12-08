@@ -1,5 +1,6 @@
 export enum MimeType {
   APP_GZIP = "application/gzip",
+  APP_GRAPHQL = "application/graphql",
   APP_JSON = "application/json",
   APP_PDF = "application/pdf",
   APP_XML = "application/xml",
