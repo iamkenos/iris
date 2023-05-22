@@ -23,7 +23,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "target": "ES5",
-    "types": ["node", "jest"]
+    "types": ["node", "@types/jest"]
   },
   "include": ["./**/**.ts"],
   "exclude": ["node_modules", "build"]
