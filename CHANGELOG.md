@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/iamkenos/iris/compare/v0.0.0...v0.1.0) (2023-05-22)
+
+
+### Chore
+
+* fix package-lock file ([a7221f4](https://github.com/iamkenos/iris/commit/a7221f4f0ef536ae0baafd476fb4133fe1db2a74))
+
 ## 0.0.0 (2023-05-22)
 
 
