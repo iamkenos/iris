@@ -1,4 +1,5 @@
 import { AllureAdapter } from "@common";
+
 declare let global: any;
 
 global

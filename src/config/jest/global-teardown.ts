@@ -1,8 +1,9 @@
-import type { Config } from "@jest/types";
+import * as path from "path";
 
-import { ALLURE_HTML_DIR, ALLURE_RAW_DIR, ALLURE_REPORTS_DIR, AllureAdapter } from "@common";
 import { DIM_COLOR } from "jest-matcher-utils";
-import path from "path";
+import { ALLURE_HTML_DIR, ALLURE_RAW_DIR, ALLURE_REPORTS_DIR, AllureAdapter } from "@common";
+
+import type { Config } from "@jest/types";
 
 /**
  * Any global variables that are defined through globalSetup can only be read in globalTeardown.

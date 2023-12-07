@@ -1,5 +1,6 @@
-import type { Response, Spec } from "@client";
 import axios from "axios";
+
+import type { Response, Spec } from "@client";
 
 export class Request {
   private url: string;

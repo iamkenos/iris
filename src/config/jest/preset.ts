@@ -1,5 +1,6 @@
-import { Config as JestConfig } from "@jest/types";
-import path from "path";
+import * as path from "path";
+
+import type { Config as JestConfig } from "@jest/types";
 
 const preset: Partial<JestConfig.Argv> = {
   testRunner: "jasmine2",

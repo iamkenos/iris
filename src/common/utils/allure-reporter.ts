@@ -1,10 +1,12 @@
+import * as fs from "fs-extra";
+import * as path from "path";
+
+import cli from "allure-commandline";
+
 import { isJSON } from "@common";
 import { Request, Response } from "@client";
 import { BufferEncoding, MimeType } from "./enums";
 import { Reporter } from "jest-allure/src/Reporter";
-import cli from "allure-commandline";
-import fs from "fs-extra";
-import path from "path";
 
 declare let reporter: Reporter;
 declare let global: any;
@@ -13,7 +15,7 @@ export const ALLURE_RAW_DIR = "allure";
 
 export const ALLURE_HTML_DIR = "html";
 
-export const ALLURE_REPORTS_DIR = ".reports";
+export const ALLURE_REPORTS_DIR = "results";
 
 export abstract class AllureAdapter {
   public static async cli(args: string[]) {
@@ -32,6 +34,18 @@ export abstract class AllureAdapter {
     return reporter;
   }
 
+  public static addAttachment(...args: Parameters<Reporter["addAttachment"]>) {
+    reporter.addAttachment(...args);
+  }
+
+  public static startStep(...args: Parameters<Reporter["startStep"]>) {
+    reporter.startStep(...args);
+  }
+
+  public static endStep(...args: Parameters<Reporter["endStep"]>) {
+    reporter.endStep(...args);
+  }
+
   public static attachFile(title: string, filename: string, attachment: any, mimetype: string) {
     reporter.addAttachment(`${title}: ${filename}`, attachment, mimetype);
   }
@@ -43,12 +57,12 @@ export abstract class AllureAdapter {
     }
   }
 
-  public static attachRequest(request: Request, isBodyIncluded = true) {
+  public static attachRequest(request: Request, shouldAttachBody = true) {
     // eslint-disable-next-line
     const { data: deleted, ...rest } = request.spec; // immutably delete data prop; it's redundant to body prop
     let spec = { ...rest };
 
-    if (!isBodyIncluded) {
+    if (!shouldAttachBody) {
       // eslint-disable-next-line
       const { body: deleted, ...rest } = spec;
       spec = rest;

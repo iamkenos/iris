@@ -1,11 +1,14 @@
+import fs from "fs-extra";
+import path from "path";
+
 import $RefParser from "@apidevtools/json-schema-ref-parser";
 import Ajv from "ajv";
 import ajvErrors from "ajv-errors";
 import ajvFormats from "ajv-formats";
-import fs from "fs-extra";
-import path from "path";
-import { MatcherState } from "@jest/expect";
-import { MatcherHintOptions } from "jest-matcher-utils";
+
+import type { Config } from "../config/types"
+import type { MatcherState } from "@jest/expect";
+import type { MatcherHintOptions } from "jest-matcher-utils";
 
 import {
   AllureAdapter,
@@ -27,10 +30,10 @@ expect.extend({
       isNot: this.isNot,
       promise: this.promise
     };
-    const snapshot = global.iris.snapshots.schema;
+    const snapshot = global.iris.snapshots.schema as Config["globals"]["iris"]["snapshots"]["schema"];
     const output = JSON.stringify(isJSON(received) ? JSON.parse(received) : received);
     const actFile = path.join(snapshot.actualDir, filename) + ".json";
-    const expFile = path.join(snapshot.baselineDir, filename) + ".json";
+    const expFile = path.join(snapshot.expectedDir, filename) + ".json";
     fs.outputFileSync(actFile, output);
 
     const actContent = fs.readFileSync(actFile, BufferEncoding.UTF8);
@@ -42,7 +45,7 @@ expect.extend({
       canRead,
       /** see: [custom resolvers](https://apitools.dev/json-schema-ref-parser/docs/plugins/resolvers.html) */
       read(file) {
-        const uri = path.join(snapshot.baselineDir, file.url.replace(canRead, ""));
+        const uri = path.join(snapshot.expectedDir, file.url.replace(canRead, ""));
         const content = fs.readFileSync(uri);
         return content;
       }

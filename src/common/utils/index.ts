@@ -1,3 +1,3 @@
-export * from "./AllureAdapter";
+export * from "./allure-reporter";
 export * from "./enums";
-export * from "./parsing";
+export * from "./string";

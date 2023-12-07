@@ -4,7 +4,8 @@
     "declaration": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
-    "lib": ["ES2020", "DOM"],
+    "lib": ["ESNext"],
+    "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "build",
     "paths": {
@@ -22,7 +23,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
-    "target": "ES5",
+    "target": "ESNext",
     "types": ["node", "@types/jest"]
   },
   "include": ["./**/**.ts"],
