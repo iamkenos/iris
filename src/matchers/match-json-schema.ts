@@ -6,7 +6,7 @@ import Ajv from "ajv";
 import ajvErrors from "ajv-errors";
 import ajvFormats from "ajv-formats";
 
-import type { Config } from "../config/types"
+import type { Config } from "../config/types";
 import type { MatcherState } from "@jest/expect";
 import type { MatcherHintOptions } from "jest-matcher-utils";
 

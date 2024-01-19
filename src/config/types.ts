@@ -11,7 +11,7 @@ export interface Config extends Omit<Partial<JestConfig.Argv>, "globals"> {
       snapshots: Snapshots;
     }
   }
-};
+}
 
 type SnapshotOptions = {
   /** Directory to store the output of this comparable object in, relative to the config file */

@@ -1,5 +1,5 @@
 import { Response } from "@client";
-import { AllureAdapter, isJSON, MimeType, changecase } from "@common";
+import { AllureAdapter, changecase, isJSON, MimeType } from "@common";
 
 export const formatStepName = (functionName: string, preferred = true) => {
   return preferred ? changecase.capitalCase(functionName) : `${changecase.capitalCase(functionName)} (Not)`;

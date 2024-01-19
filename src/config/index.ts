@@ -43,4 +43,4 @@ export function configure(overrides?: Partial<Config>) {
     preset: path.resolve(__dirname, "../../"),
   };
   return merge(preset, resolved);
-};
+}

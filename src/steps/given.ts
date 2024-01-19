@@ -1,7 +1,7 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 
-import { AllureAdapter, BufferEncoding, MimeType, changecase } from "@common";
+import { AllureAdapter, BufferEncoding, changecase, MimeType } from "@common";
 import { Request } from "@client";
 
 import callsites from "callsites";

@@ -11,3 +11,4 @@ build
 **/results
 **/snapshots/**/actual
 **/snapshots/**/diff
+*.tgz

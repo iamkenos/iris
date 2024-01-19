@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": ["node", "@types/jest"],
+    "paths": {
+      "@specs": ["specs/index"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}

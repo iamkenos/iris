@@ -8,6 +8,7 @@ export function givenUsersQueryRequest() {
   const query = `query {
     users {
       nodes {
+        id
         name
         email
       }
