@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/iamkenos/iris/compare/v0.1.1...v0.1.2) (2024-01-20)
+
+
+### Features
+
+* cli module and init command ([8024e8e](https://github.com/iamkenos/iris/commit/8024e8e70cc6f328a39f9b1fea910a1e30a5b78c))
+
 ### [0.1.1](https://github.com/iamkenos/iris/compare/v0.1.0...v0.1.1) (2023-12-07)
 
 
