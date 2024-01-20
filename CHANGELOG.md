@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/iamkenos/iris/compare/v0.1.2...v0.1.3) (2024-01-20)
+
+
+### Bug Fixes
+
+* typo on cli usage message ([b0331fd](https://github.com/iamkenos/iris/commit/b0331fda8f3d324a8fd496afdeac9f02943368a9))
+
 ### [0.1.2](https://github.com/iamkenos/iris/compare/v0.1.1...v0.1.2) (2024-01-20)
 
 
