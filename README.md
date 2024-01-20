@@ -40,8 +40,7 @@ ISC
 
 ## TODO
 
-- full UTs
-- full docs
-- npm init
-- contrib guide
-- jest extended
+- Unit Tests
+- Full documentation
+- Contributing guide
+- Jest extended matchers

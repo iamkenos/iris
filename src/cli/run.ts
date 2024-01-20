@@ -8,7 +8,7 @@ const COMMANDS = [
 
 const USAGE = `
 Usage:
-npx kyoko [command] [options]
+npx iris [command] [options]
 
 Commands:
 ${COMMANDS.map(([c, o, d]) => `  ${c}\t${o}\t${d}`).join("\n")}`;
