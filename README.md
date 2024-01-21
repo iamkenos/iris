@@ -38,7 +38,7 @@ You'll need a working knowledge of Jest and Axios to be able to use this library
 
 ISC
 
-## TODO
+## Todo
 
 - Unit Tests
 - Full documentation
