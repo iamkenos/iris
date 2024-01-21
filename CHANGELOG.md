@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/iamkenos/iris/compare/v0.1.3...v0.1.4) (2024-01-21)
+
+
+### Features
+
+* jest-extended matchers ([8426c70](https://github.com/iamkenos/iris/commit/8426c70069e3bed29f5df78c109f8ee0c5606982))
+
 ### [0.1.3](https://github.com/iamkenos/iris/compare/v0.1.2...v0.1.3) (2024-01-20)
 
 
