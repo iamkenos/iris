@@ -35,7 +35,7 @@
   "author": "iamkenos <alexis.matunog@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:iamkenos/iris.git"
+    "url": "git+ssh://git@github.com/iamkenos/iris.git"
   },
   "license": "ISC",
   "main": "./build/index.js",
