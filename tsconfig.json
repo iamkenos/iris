@@ -26,6 +26,7 @@
     "target": "ESNext",
     "types": ["node", "@types/jest"]
   },
+  "files": ["node_modules/jest-extended/types/index.d.ts"],
   "include": ["./**/**.ts"],
   "exclude": ["node_modules", "build"]
 }

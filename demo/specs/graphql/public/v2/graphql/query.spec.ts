@@ -6,7 +6,7 @@ import {
 import { givenUserQueryRequest, givenUsersQueryRequest, REQ_PATH } from "./";
 
 describe(`[GraphQL]: ${REQ_PATH}`, () => {
-  it.each([5974988, 5974987])("S01: should return details of a specific user: %i", async(id) => {
+  it.each([6007072, 6007073])("S01: should return details of a specific user: %i", async(id) => {
     const request = givenUserQueryRequest(id);
     const response = await whenSendRequest(request);
 

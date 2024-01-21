@@ -43,4 +43,3 @@ ISC
 - Unit Tests
 - Full documentation
 - Contributing guide
-- Jest extended matchers

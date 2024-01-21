@@ -17,6 +17,7 @@ describe(`[REST]: ${REQ_METHOD_GET} ${REQ_PATH}`, () => {
     });
 
     expect(response.status).toEqual(200);
+    expect(response.status !== 202).toBeTrue(); // using jest extended matcher, see: https://jest-extended.jestcommunity.dev/docs/matchers/
     expect(response.data.length).toBeGreaterThan(0);
     response.data.forEach(item => {
       expect(item.gender).toEqual("female");
