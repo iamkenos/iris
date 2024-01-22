@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/iamkenos/iris/compare/v0.1.4...v0.1.5) (2024-01-22)
+
+
+### Bug Fixes
+
+* remove allure report generation on runtime ([128ef4d](https://github.com/iamkenos/iris/commit/128ef4d8b4d854b65bd768d5446268e583d74bf9))
+
+
+### Chore
+
+* normalize repo url ([16dff4e](https://github.com/iamkenos/iris/commit/16dff4e80adb221d81253da988f24ad6694d0ef6))
+
 ### [0.1.4](https://github.com/iamkenos/iris/compare/v0.1.3...v0.1.4) (2024-01-21)
 
 
