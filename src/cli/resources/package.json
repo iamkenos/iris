@@ -4,6 +4,7 @@
   "description": "Get started with Jest and Axios.",
   "scripts": {
     "test": "jest --config jest.config.ts",
+    "prereport": "allure -q generate results/allure/ -c -o results/allure/html/",
     "report": "allure open results/allure/html/"
   },
   "dependencies": {

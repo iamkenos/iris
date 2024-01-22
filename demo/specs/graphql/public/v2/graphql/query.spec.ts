@@ -11,7 +11,7 @@ describe(`[GraphQL]: ${REQ_PATH}`, () => {
     const response = await whenSendRequest(request);
 
     thenResponseStatusEquals(response, 200);
-    await thenResponseSchemaEquals(response, "graphql/user-schema");
+    await thenResponseSchemaEquals(response, "graphql/user-schema", false);
   });
 
   it("S02: should return the list of all users", async() => {

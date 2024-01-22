@@ -25,7 +25,8 @@
     "postbuild:mv:tsconfig": "shx mv ./build/cli/resources/tsconfig.test.json ./build/cli/resources/tsconfig.json",
     "pack": "npm run build && npm pack",
     "test:demo": "jest --config demo/jest.config.ts",
-    "report:demo": "allure open demo/results/allure/html"
+    "prereport:demo": "allure -q generate demo/results/allure/ -c -o demo/results/allure/html/",
+    "report:demo": "allure open demo/results/allure/html/"
   },
   "keywords": [
     "api-test",

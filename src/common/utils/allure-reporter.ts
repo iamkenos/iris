@@ -1,8 +1,6 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 
-import cli from "allure-commandline";
-
 import { isJSON } from "@common";
 import { Request, Response } from "@client";
 import { BufferEncoding, MimeType } from "./enums";
@@ -11,23 +9,10 @@ import { Reporter } from "jest-allure/src/Reporter";
 declare let reporter: Reporter;
 declare let global: any;
 
-export const ALLURE_RAW_DIR = "allure";
-
-export const ALLURE_HTML_DIR = "html";
-
-export const ALLURE_REPORTS_DIR = "results";
-
 export abstract class AllureAdapter {
-  public static async cli(args: string[]) {
-    await cli(args);
-  }
 
   public static getRawDir() {
-    return path.join(global.iris.baseDir, ALLURE_REPORTS_DIR, ALLURE_RAW_DIR);
-  }
-
-  public static getHtmlDir() {
-    return path.join(AllureAdapter.getRawDir(), ALLURE_HTML_DIR);
+    return path.join(global.iris.resultsDir, "allure");
   }
 
   public static reporter() {

@@ -1,8 +1,6 @@
 import * as fs from "fs-extra";
 import * as path from "path";
 
-import { ALLURE_REPORTS_DIR } from "@common";
-
 import callsites from "callsites";
 import merge from "lodash.merge";
 
@@ -15,7 +13,7 @@ export function configure(overrides?: Partial<Config>) {
     globals: {
       iris: {
         baseDir,
-        resultsDir: path.resolve(baseDir, overrides?.globals?.iris?.resultsDir || ALLURE_REPORTS_DIR),
+        resultsDir: path.resolve(baseDir, overrides?.globals?.iris?.resultsDir || "results/"),
         snapshots: {
           schema: {
             outDir: "snapshots/schema"
