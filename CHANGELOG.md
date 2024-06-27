@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/iamkenos/iris/compare/v0.1.5...v0.2.0) (2024-06-27)
+
+
+### Chore
+
+* npm audit fixes ([9a0283d](https://github.com/iamkenos/iris/commit/9a0283d98d948c50414a671bea26a912fc3235fa))
+
+
+### Refactor
+
+* allure reporter exports ([6882237](https://github.com/iamkenos/iris/commit/688223780f06a436709098390bead188f4af0aa3))
+
 ### [0.1.5](https://github.com/iamkenos/iris/compare/v0.1.4...v0.1.5) (2024-01-22)
 
 
