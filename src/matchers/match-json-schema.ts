@@ -11,10 +11,10 @@ import type { MatcherState } from "@jest/expect";
 import type { MatcherHintOptions } from "jest-matcher-utils";
 
 import {
-  AllureAdapter,
   BufferEncoding,
   isJSON,
-  MimeType
+  MimeType,
+  Reporter
 } from "@common";
 
 expect.extend({
@@ -77,8 +77,8 @@ expect.extend({
         `Received: ${this.utils.RECEIVED_COLOR(JSON.stringify(actual, null, 2))}`;
 
     if (!pass && !this.isNot) {
-      AllureAdapter.reporter().addAttachment(`Actual: ${actFile}`, JSON.stringify(actual, null, 2), MimeType.APP_JSON);
-      AllureAdapter.reporter().addAttachment(`Expected: ${actFile}`, JSON.stringify(expected, null, 2), MimeType.APP_JSON);
+      Reporter.addAttachment(`Actual: ${actFile}`, JSON.stringify(actual, null, 2), MimeType.APP_JSON);
+      Reporter.addAttachment(`Expected: ${actFile}`, JSON.stringify(expected, null, 2), MimeType.APP_JSON);
     }
     return { actual: received, expected, message, name: matcherName, pass };
   }

@@ -1,8 +1,8 @@
-import { AllureAdapter } from "@common";
+import { Reporter } from "@common";
 
 declare let global: any;
 
 global
   .reporter
   .allure
-  .setOptions({ targetDir: AllureAdapter.getRawDir() });
+  .setOptions({ targetDir: Reporter.directory() });

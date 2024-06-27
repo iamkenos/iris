@@ -4,30 +4,30 @@ import * as path from "path";
 import { isJSON } from "@common";
 import { Request, Response } from "@client";
 import { BufferEncoding, MimeType } from "./enums";
-import { Reporter } from "jest-allure/src/Reporter";
+import { Reporter as JestReporter } from "jest-allure/src/Reporter";
 
-declare let reporter: Reporter;
+declare let reporter: JestReporter;
 declare let global: any;
 
-export abstract class AllureAdapter {
+export abstract class Reporter {
 
-  public static getRawDir() {
+  public static directory() {
     return path.join(global.iris.resultsDir, "allure");
   }
 
-  public static reporter() {
+  public static instance() {
     return reporter;
   }
 
-  public static addAttachment(...args: Parameters<Reporter["addAttachment"]>) {
+  public static addAttachment(...args: Parameters<JestReporter["addAttachment"]>) {
     reporter.addAttachment(...args);
   }
 
-  public static startStep(...args: Parameters<Reporter["startStep"]>) {
+  public static startStep(...args: Parameters<JestReporter["startStep"]>) {
     reporter.startStep(...args);
   }
 
-  public static endStep(...args: Parameters<Reporter["endStep"]>) {
+  public static endStep(...args: Parameters<JestReporter["endStep"]>) {
     reporter.endStep(...args);
   }
 
