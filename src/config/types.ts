@@ -1,4 +1,7 @@
-import { Config as JestConfig } from "@jest/types";
+import type { Config as JestConfig } from "@jest/types";
+declare global {
+  var iris: Config["globals"]["iris"];
+}
 
 export interface Config extends Omit<Partial<JestConfig.Argv>, "globals"> {
   globals: {

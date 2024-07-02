@@ -7,12 +7,11 @@ import { BufferEncoding, MimeType } from "./enums";
 import { Reporter as JestReporter } from "jest-allure/src/Reporter";
 
 declare let reporter: JestReporter;
-declare let global: any;
 
 export abstract class Reporter {
 
   public static directory() {
-    return path.join(global.iris.resultsDir, "allure");
+    return path.join(iris.resultsDir, "allure");
   }
 
   public static instance() {

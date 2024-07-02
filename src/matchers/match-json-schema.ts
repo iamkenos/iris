@@ -6,7 +6,6 @@ import Ajv from "ajv";
 import ajvErrors from "ajv-errors";
 import ajvFormats from "ajv-formats";
 
-import type { Config } from "../config/types";
 import type { MatcherState } from "@jest/expect";
 import type { MatcherHintOptions } from "jest-matcher-utils";
 
@@ -30,7 +29,7 @@ expect.extend({
       isNot: this.isNot,
       promise: this.promise
     };
-    const snapshot = global.iris.snapshots.schema as Config["globals"]["iris"]["snapshots"]["schema"];
+    const snapshot = iris.snapshots.schema;
     const output = JSON.stringify(isJSON(received) ? JSON.parse(received) : received);
     const actFile = path.join(snapshot.actualDir, filename) + ".json";
     const expFile = path.join(snapshot.expectedDir, filename) + ".json";
