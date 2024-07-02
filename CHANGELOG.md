@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/iamkenos/iris/compare/v0.3.0...v0.4.0) (2024-07-02)
+
+
+### Refactor
+
+* use typed globalThis ([e1b98e1](https://github.com/iamkenos/iris/commit/e1b98e1c5ed59b326c727897e47fba39b5627222))
+
 ## [0.3.0](https://github.com/iamkenos/iris/compare/v0.2.0...v0.3.0) (2024-07-02)
 
 
