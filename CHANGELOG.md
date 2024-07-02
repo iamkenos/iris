@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/iamkenos/iris/compare/v0.2.0...v0.3.0) (2024-07-02)
+
+
+### Chore
+
+* add jest recommended extension ([3293e98](https://github.com/iamkenos/iris/commit/3293e98e39771a0d29ebc71c76743b0fe834e90e))
+* dependency upgrades ([ef7d9fc](https://github.com/iamkenos/iris/commit/ef7d9fc8f6310ae3fc394b2c059d373a417bcce7))
+
 ## [0.2.0](https://github.com/iamkenos/iris/compare/v0.1.5...v0.2.0) (2024-06-27)
 
 
