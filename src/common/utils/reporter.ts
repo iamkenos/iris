@@ -11,7 +11,7 @@ declare let reporter: JestReporter;
 export abstract class Reporter {
 
   public static directory() {
-    return path.join(iris.resultsDir, "allure");
+    return path.join(iris.config.resultsDir, "allure");
   }
 
   public static instance() {

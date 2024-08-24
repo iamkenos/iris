@@ -29,7 +29,7 @@ expect.extend({
       isNot: this.isNot,
       promise: this.promise
     };
-    const snapshot = iris.snapshots.schema;
+    const snapshot = iris.config.snapshots.schema;
     const output = JSON.stringify(isJSON(received) ? JSON.parse(received) : received);
     const actFile = path.join(snapshot.actualDir, filename) + ".json";
     const expFile = path.join(snapshot.expectedDir, filename) + ".json";

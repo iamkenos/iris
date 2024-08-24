@@ -18,7 +18,7 @@ export const givenRequest = (url: string, options: Spec & { shouldAttachBody?: b
 };
 
 export const givenGraphQLQueryFile = (file: string, variables?: any) => {
-  const query = fs.readFileSync(path.join(iris.baseDir, file), BufferEncoding.UTF8);
+  const query = fs.readFileSync(path.join(iris.config.baseDir, file), BufferEncoding.UTF8);
   const data = { query, variables };
   Reporter.startStep(`${changecase.capitalCase(givenGraphQLQueryFile.name)}: ${file}`);
   Reporter.addAttachment("Query", JSON.stringify(data, null, 2), MimeType.TEXT_PLAIN);
