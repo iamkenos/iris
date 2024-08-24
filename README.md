@@ -3,9 +3,11 @@
 
 <!-- TODO: CHANGE THIS -->
 <p align="center">
-  <a href="https://github.com/iamkenos/hornet/actions/workflows/unit-tests.yml">
-      <img alt="Unit Tests" src="https://github.com/iamkenos/hornet/actions/workflows/unit-tests.yml/badge.svg">
-  </a>
+  <img alt="Unit Tests" src="https://github.com/iamkenos/iris/actions/workflows/unit-tests.yml/badge.svg">
+  <img alt="Feature Tests" src="https://github.com/iamkenos/iris/actions/workflows/feature-tests.yml/badge.svg">
+  <br/>
+  <img alt="" src="https://img.shields.io/npm/v/@iamkenos/iris?style=flat-square">
+  <img alt="" src="https://img.shields.io/npm/dm/@iamkenos/iris?style=flat-square">
 </p>
 
 ## About
