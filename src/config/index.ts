@@ -20,7 +20,8 @@ export function configure(overrides?: Partial<Config>) {
           }
         }
       }
-    }
+    },
+    testResultsProcessor: path.join(process.cwd(), "node_modules/jest-html-reporter")
   };
   // resolve and prepare directories
   const resolved = merge({}, custom, overrides);
@@ -35,6 +36,10 @@ export function configure(overrides?: Partial<Config>) {
     fs.removeSync(snapshots[key].diffDir);
     fs.mkdirsSync(snapshots[key].expectedDir);
   });
+
+  process.env.JEST_HTML_REPORTER_OUTPUT_PATH = path.join(resultsDir, "report.html");
+  process.env.JEST_HTML_REPORTER_INCLUDE_FAILURE_MSG = "true";
+  process.env.JEST_HTML_REPORTER_INCLUDE_SUITE_FAILURE = "true";
 
   // jest preset goes here
   const preset = {
