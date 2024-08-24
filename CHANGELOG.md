@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/iamkenos/iris/compare/v0.4.0...v0.4.1) (2024-08-24)
+
+
+### Features
+
+* simple html reporter ([2d996ec](https://github.com/iamkenos/iris/commit/2d996ec80412d574e90a89adbe78cc9063e0fa62))
+
+
+### Refactor
+
+* rework configuration ([3d5d097](https://github.com/iamkenos/iris/commit/3d5d0971b7672fc8bc0d7ae69b257cea59dddfda))
+
+
+### Chore
+
+* ci workflows ([2cd1891](https://github.com/iamkenos/iris/commit/2cd18910a77ac59dc0e700840cd7da5eddc38b8f))
+
 ## [0.4.0](https://github.com/iamkenos/iris/compare/v0.3.0...v0.4.0) (2024-07-02)
 
 
