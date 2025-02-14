@@ -1,13 +1,20 @@
 <!-- markdownlint-disable MD033 -->
 <h1 align="center">IRIS</h1>
 
-<!-- TODO: CHANGE THIS -->
-<p align="center">
-  <img alt="Unit Tests" src="https://github.com/iamkenos/iris/actions/workflows/unit-tests.yml/badge.svg">
-  <img alt="Feature Tests" src="https://github.com/iamkenos/iris/actions/workflows/feature-tests.yml/badge.svg">
+<p align="center" width="100%">
+  <a href="https://github.com/iamkenos/iris/actions/workflows/unit-tests.yml" target="_blank">
+    <img src="https://img.shields.io/github/actions/workflow/status/iamkenos/iris/unit-tests.yml?label=unit%20tests&logo=github">
+  </a>
+  <a href="https://github.com/iamkenos/iris/actions/workflows/feature-tests.yml" target="_blank">
+    <img src="https://img.shields.io/github/actions/workflow/status/iamkenos/iris/unit-tests.yml?label=feature%20tests&logo=github">
+  </a>
   <br/>
-  <img alt="" src="https://img.shields.io/npm/v/@iamkenos/iris?style=flat-square">
-  <img alt="" src="https://img.shields.io/npm/dm/@iamkenos/iris?style=flat-square">
+  <a href="https://www.npmjs.com/package/@iamkenos/iris?activeTab=readme" target="_blank">
+    <img alt="" src="https://img.shields.io/npm/v/@iamkenos/iris?label=version&logo=npm&logoColor=red&color=red">
+  </a>
+  <a href="https://www.npmjs.com/package/@iamkenos/iris?activeTab=readme" target="_blank">
+    <img alt="" src="https://img.shields.io/npm/dm/@iamkenos/iris?label=downloads&logo=npm&logoColor=red&color=red">
+  </a>
 </p>
 
 ## About
