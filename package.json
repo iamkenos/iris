@@ -1,6 +1,6 @@
 {
   "name": "@iamkenos/iris",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Test API endpoints with Axios & Jest using a collection of custom matchers and built-in utility functions.",
   "bin": {
     "iris": "bin/iris.js"
