@@ -6,7 +6,7 @@
     <img src="https://img.shields.io/github/actions/workflow/status/iamkenos/iris/unit-tests.yml?label=unit%20tests&logo=github">
   </a>
   <a href="https://github.com/iamkenos/iris/actions/workflows/feature-tests.yml" target="_blank">
-    <img src="https://img.shields.io/github/actions/workflow/status/iamkenos/iris/unit-tests.yml?label=feature%20tests&logo=github">
+    <img src="https://img.shields.io/github/actions/workflow/status/iamkenos/iris/feature-tests.yml?label=feature%20tests&logo=github">
   </a>
   <br/>
   <a href="https://www.npmjs.com/package/@iamkenos/iris?activeTab=readme" target="_blank">
