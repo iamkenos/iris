@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.2](https://github.com/iamkenos/iris/compare/v0.4.1...v0.4.2) (2025-02-14)
+
+
+### Chore
+
+* audit fixes ([7cd0e44](https://github.com/iamkenos/iris/commit/7cd0e448041328d018eaeb0686a19f645abf8325))
+
 ### [0.4.1](https://github.com/iamkenos/iris/compare/v0.4.0...v0.4.1) (2024-08-24)
 
 
