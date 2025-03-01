@@ -2,6 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "declaration": true,
+    "declarationMap": true,
+    "inlineSources": true,
     "downlevelIteration": true,
     "esModuleInterop": true,
     "lib": ["ESNext"],
